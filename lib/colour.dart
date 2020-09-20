@@ -21,6 +21,7 @@ class Colour extends Color {
     bool isSingleParams = noX && noY && noZ;
 
     if(isSingleParams) {
+      if(color is Color) return color.value;
       if(color is int) return color; // Normal color: Colour(0xFF121212)
       return getColorFromHex(color.toString());
     }
@@ -37,7 +38,8 @@ class Colour extends Color {
 
     if(isDoubleParams && isXOpacity) {
       Color _color;
-      if(color is int) _color = Color(color);
+      if(color is Color) _color = color;
+      else if(color is int) _color = Color(color);
       else _color = Color(getColorFromHex(color.toString()));
       return _color.withOpacity(x).value;
     }

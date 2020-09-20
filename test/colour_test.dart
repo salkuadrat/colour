@@ -14,6 +14,10 @@ void main() {
   test('Normal color with opacity', () {
     assert(Colour(0xFFFFFFFF, 0.25).value == Color(0xFFFFFFFF).withOpacity(0.25).value);
     assert(Colour(0x00000000, 0.5).value == Color(0x00000000).withOpacity(0.5).value);
+
+    // use existing color with opacity
+    Color color = Color(0xFFFFFFFF);
+    assert(Colour(color, 0.75).value == color.withOpacity(0.75).value);
   });
 
   test('Normal hex color', () {

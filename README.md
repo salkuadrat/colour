@@ -57,21 +57,21 @@ Colour('ff1212aa', 0.6)
 Colour('#ff1212aa', 0.42)
 ```
 
-Or feel free to use RGB format:
+Feel free to use RGB format.
 ```
 Colour(255, 255, 255)
 Colour(0, 0, 0)
 Colour(120, 120, 80)
 ```
 
-It can also be used with ARGB format:
+It can also be used with ARGB format.
 ```
 Colour(0, 255, 255, 255) // shorter than Color.fromARGB(0, 255, 255, 255)
 Colour(255, 0, 0, 0)
 Colour(75, 120, 120, 80)
 ```
 
-RGBO format can works fine too:
+RGBO format can works fine too...
 ```
 Colour(255, 255, 255, 0.0) // shorter than Color.fromRGBO(255, 255, 255, 0.0)
 Colour(0, 0, 0, 0.5)
