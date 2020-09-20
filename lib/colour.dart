@@ -33,21 +33,21 @@ class Colour extends Color {
     // Colour('#121212', 0.25)
     // Colour('121212', 0.25)
     bool isDoubleParams = hasX && noY && noZ;
+    bool isXOpacity = x is double && x >= 0.0 && x <= 1.0;
 
-    if(isDoubleParams) {
-      if(x is double && x >= 0.0 && x <= 1.0) {
-        Color _color;
-        if(color is int) _color = Color(color);
-        else _color = Color(getColorFromHex(color.toString()));
-        return _color.withOpacity(x).value;
-      }
+    if(isDoubleParams && isXOpacity) {
+      Color _color;
+      if(color is int) _color = Color(color);
+      else _color = Color(getColorFromHex(color.toString()));
+      return _color.withOpacity(x).value;
     }
 
     // check if Colour use only 3 parameters (color, x and y)
     // then it is RGB color => Colour(255, 255, 255)
     bool isTripleParams = hasX && hasY && noZ;
+    bool isTripleParamsInteger = color is int && x is int && y is int;
 
-    if(isTripleParams) {
+    if(isTripleParams && isTripleParamsInteger) {
       return Color.fromARGB(255, color, x, y).value;
     }
 
