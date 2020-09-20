@@ -1,6 +1,6 @@
 name: colour
 description: An easy way to use color in flutter (with Normal, HEX, RGB, ARGB, or RGBO format).
-version: 1.0.1
+version: 1.0.2
 author: Salman S
 homepage: https://github.com/salkuadrat/colour.git
 repository: https://github.com/salkuadrat/colour.git

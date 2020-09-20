@@ -5,3 +5,7 @@
 ## [1.0.1] - 21 Sept 2020
 
 * Add a more restricted checking for RGB params.
+
+## [1.0.2] - 21 Sept 2020
+
+* Can accept instance of Color as the first parameter

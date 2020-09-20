@@ -8,7 +8,7 @@ In your flutter project add the dependency:
 
 ```
 dependencies:
-  colour: ^1.0.1
+  colour: ^1.0.2
 ```
 
 or reference the git repo directly:
@@ -76,4 +76,14 @@ RGBO format can works fine too...
 Colour(255, 255, 255, 0.0) // shorter than Color.fromRGBO(255, 255, 255, 0.0)
 Colour(0, 0, 0, 0.5)
 Colour(120, 120, 80, 1.0)
+```
+
+Anyhow, this is a rare case. Suppose you already have a defined variable of Color.
+You can apply opacity to Color using Colour like this:
+```
+// suppose you already have an existing Color
+Color _color = Colors.teal;
+
+// apply opacity with Colour 
+Colour(_color, 0.75) // the same as _color.withOpacity(0.75)
 ```
