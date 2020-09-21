@@ -9,3 +9,7 @@
 ## [1.0.2] - 21 Sept 2020
 
 * Can accept instance of Color as the first parameter
+
+## [1.0.3] - 21 Sept 2020
+
+* Fix formatting and add example.
