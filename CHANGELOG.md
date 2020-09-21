@@ -13,3 +13,7 @@
 ## [1.0.3] - 21 Sept 2020
 
 * Fix formatting and add example.
+
+## [1.0.4] - 22 Sept 2020
+
+* Add Visual Studio Code Extension

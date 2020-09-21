@@ -8,7 +8,7 @@ In your flutter project add the dependency:
 
 ```
 dependencies:
-  colour: ^1.0.3
+  colour: ^1.0.4
 ```
 
 or reference the git repo directly:
@@ -95,4 +95,3 @@ You can search and install extension named ```fluttercolour``` to show Colour pr
 ![](assets/fluttercolour1.png)
 
 ![](assets/fluttercolour2.png)
-
