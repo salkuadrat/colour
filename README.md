@@ -87,3 +87,11 @@ Color _color = Colors.teal;
 // apply opacity with Colour 
 Colour(_color, 0.75) // the same as _color.withOpacity(0.75)
 ```
+
+# Visual Studio Code Extension
+
+If you use VS Code, you can search and install extension named ```fluttercolour``` to show Colour preview.
+
+![](assets/fluttercolour1.png)
+![](assets/fluttercolour1.png)
+
