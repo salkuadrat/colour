@@ -2,10 +2,29 @@ library colour;
 
 import 'package:flutter/material.dart';
 
+/// An immutable 32 bit color value in any format (normal, hex, rgb, argb, rgbo).
+///
+///
+/// Here are some ways it could be constructed:
+///
+/// ```dart
+/// Colour c = const Colour(0xFF42A5F5);
+/// Colour c = const Colour(0xFF42A5F5, 0.5);
+/// Colour c = const Colour('42A5F5');
+/// Colour c = const Colour('42A5F5', 0.5);
+/// Colour c = const Colour('#42A5F5');
+/// Colour c = const Colour('42a5f5');
+/// Colour c = const Colour('#42a5f5', 0.8);
+/// Colour c = const Colour(255, 255, 255); // RGB
+/// Colour c = const Colour(255, 255, 255, 255); // ARGB
+/// Colour c = const Colour(255, 255, 255, 0.5); // RGBO
+/// ```
+///
 class Colour extends Color {
   Colour(dynamic color, [dynamic x, dynamic y, dynamic z])
       : super(getColor(color, x, y, z));
 
+  /// get an immutable 32 bit color value from dynamic parameters
   static int getColor(dynamic color, [dynamic x, dynamic y, dynamic z]) {
     bool hasX = x != null;
     bool hasY = y != null;
@@ -87,13 +106,13 @@ class Colour extends Color {
     return color;
   }
 
-  // parsing hex color for any of the four formats, such as:
-  // Colour('#FF121212')
-  // Colour('FF121212')
-  // Colour('#121212')
-  // Colour('121212')
+  /// parsing hex color for any of the four formats, such as:
+  /// getColorFromHex('#FF121212')
+  /// getColorFromHex('FF121212')
+  /// getColorFromHex('#121212')
+  /// getColorFromHex('121212')
   static int getColorFromHex(String color) {
-    String hex = color.toString().toUpperCase().replaceAll('#', '');
+    String hex = color.toUpperCase().replaceAll('#', '');
     if (hex.length == 6) hex = 'FF' + hex;
     return int.parse(hex, radix: 16);
   }
