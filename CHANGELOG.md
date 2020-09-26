@@ -17,3 +17,7 @@
 ## [1.0.4] - 22 Sept 2020
 
 * Add Visual Studio Code Extension
+
+## [1.0.5] - 26 Sept 2020
+
+* Add const constructor
