@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -58,12 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             Container(
-              width: 72, height: 56,
+              width: 72,
+              height: 56,
               color: Colour('#38ef7d'),
             ),
             SizedBox(height: 10),
             Container(
-              width: 72, height: 56,
+              width: 72,
+              height: 56,
               color: Colour('#f80759', 0.75),
             ),
           ],
@@ -72,7 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add, color: Colour('efefef', 0.9)), // Custom color using Colour
+        child: Icon(Icons.add,
+            color: Colour('efefef', 0.9)), // Custom color using Colour
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

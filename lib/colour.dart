@@ -21,7 +21,7 @@ import 'package:flutter/material.dart';
 /// ```
 ///
 class Colour extends Color {
-  const Colour(dynamic color, [dynamic x, dynamic y, dynamic z])
+  Colour(dynamic color, [dynamic x, dynamic y, dynamic z])
       : super(getColor(color, x, y, z));
 
   /// get an immutable 32 bit color value from dynamic parameters

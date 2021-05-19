@@ -4,22 +4,28 @@ An easy way to use color in flutter (with Normal, HEX, RGB, ARGB, or RGBO format
 
 ## Getting Started
 
-In your flutter project add the dependency:
+Add dependency to your flutter project.
 
 ```
+$ flutter pub add colour
+```
+
+or
+
+```yaml
 dependencies:
-  colour: any
+  colour: ^1.0.5
 ```
 
-or reference the git repo directly:
+or from git repo:
 
-```
+```yaml
 dependencies:
   colour:
     git: https://github.com/salkuadrat/colour.git
 ```
 
-## Examples
+## Usage
 
 You can use it like a normal Color:
 ```
